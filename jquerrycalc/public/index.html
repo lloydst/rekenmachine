@@ -1,45 +1,41 @@
-<html>
-        <head>
-        <title>HTML Calculator</title>
-        <link rel="stylesheet" type="text/css" href='./styles.css'> <!-- het wilde niet lukken om de styles.css uit de shared folder te krijgen dus workaround-->
-        </head>
-        <body>
-            <div id="background">
-                <form name="calculator" >
-                    <input type="textfield" name="result" value="" id="result">
-                    <div>
-                        <input type="button" value="1" onClick="document.calculator.result.value+='1'" class="num">
-                        <input type="button" value="2" onClick="document.calculator.result.value+='2'" class="num">
-                        <input type="button" value="3" onClick="document.calculator.result.value+='3'" class="num">
-                        <input type="button" value="+" onClick="document.calculator.result.value+='+'" class="operator">
-                    </div>
-                    <div>
-                        <input type="button" value="4" onClick="document.calculator.result.value+='4'" class="num">
-                        <input type="button" value="5" onClick="document.calculator.result.value+='5'" class="num">
-                        <input type="button" value="6" onClick="document.calculator.result.value+='6'" class="num">
-                        <input type="button" value="-" onClick="document.calculator.result.value+='-'" class="operator">
-                    </div>
-                    <div>
-                        <input type="button" value="7" onClick="document.calculator.result.value+='7'" class="num">
-                        <input type="button" value="8" onClick="document.calculator.result.value+='8'" class="num">
-                        <input type="button" value="9" onClick="document.calculator.result.value+='9'" class="num">
-                        <input type="button" value="*" onClick="document.calculator.result.value+='*'" class="operator">
-                    </div>
-                    <div>    
-                        <input type="button" value="/" onClick="document.calculator.result.value+='/'" class="operator">
-                        <input type="button" value="0" onClick="document.calculator.result.value+='0'" class="num">
-                        <input type="reset" value="Reset" class="reset">
-                        <input type="button" value="=" onClick="document.calculator.result.value=eval(document.calculator.result.value)" class="equal">
-                    </div>
-                </form>
-            </div>
-            <ul>
-                <li>htmlapp: <br>
-                    <a href="http://localhost:3000">localhost:3000</a></li>
-                <li>jquerry: <br>
-                    <a href="http://localhost:3001">localhost:3001</a></li>
-                <li>angular:<br>
-                    <a href="http://localhost:3002">localhost:3002</a></li>
-            </ul> 
-        </body>
-        </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+        <div class="result" id="result"></div>
+        <div>
+            <input type="button" value="7" class="num">
+            <input type="button" value="8" class="num">
+            <input type="button" value="9" class="num">
+            <input type="button" value="-" class="operator">
+        </div> 
+        <div> 
+            <input type="button" value="4" class="num">
+            <input type="button" value="5" class="num">
+            <input type="button" value="6" class="num">
+            <input type="button" value="+" class="operator">
+        </div> 
+        <div> 
+            <input type="button" value="1" class="num">
+            <input type="button" value="2" class="num">
+            <input type="button" value="3" class="num">
+            <input type="button" value="*" class="operator">
+        </div> 
+        <div> 
+            <input type="button" value="c" class="delete">
+            <input type="button" value="0" class="num">
+            <input type="button" value="=" class="equal">
+            <input type="button" value="/" class="operator">
+        </div>
+    </div>
+</body>
+</html>
