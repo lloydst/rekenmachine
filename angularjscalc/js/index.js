@@ -1,15 +1,16 @@
-var calcApp = angular.module('calcApp', []);
+var app = angular.module('plunker', []);
 
-function MyCtrl($scope) {
-    $scope.output = "0";
-    $scope.inOperation = false;
-    $scope.num1 = 0;
-    $scope.updateOutput = function(btn) {
-        if($scope.newNumber){
-            $scope.output = 0;
-        }
-        if ($scope.output == "0" || $scope.newNumber) {
-            $scope.output = btn;
+app.controller('MainCtrl', function($scope) {
+  $scope.output = "0";
+  $scope.inOperation = false;
+  $scope.num1 = 0;
+   
+  $scope.updateOutput = function(btn) {
+		if($scope.newNumber){
+			$scope.output = 0;	
+		}
+		if($scope.output == "0" || $scope.newNumber) {
+			$scope.output = btn;
 			$scope.newNumber = false;
 		} else {
 			$scope.output += String(btn);
@@ -37,5 +38,4 @@ function MyCtrl($scope) {
 	};
 	
 }
-myApp.controller('MyCtrl', MyCtrl);
-        
+);
