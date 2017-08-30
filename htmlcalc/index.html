@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
     <title>HTML Calculator</title>
@@ -8,6 +9,7 @@
             <form name="calculator" >
                 <input type="textfield" name="result" value="" id="result">
                 <div>
+                <!-- <make a button asign="value" event="page.select form with name.add the value to the textfield result"> -->
                     <input type="button" value="1" onClick="document.calculator.result.value+='1'" class="num">
                     <input type="button" value="2" onClick="document.calculator.result.value+='2'" class="num">
                     <input type="button" value="3" onClick="document.calculator.result.value+='3'" class="num">
@@ -29,6 +31,7 @@
                     <input type="button" value="/" onClick="document.calculator.result.value+='/'" class="operator">
                     <input type="button" value="0" onClick="document.calculator.result.value+='0'" class="num">
                     <input type="reset" value="Reset" class="reset">
+                <!-- same goes for this with the exeption of the value being the returned string of what's in the result text field -->
                     <input type="button" value="=" onClick="document.calculator.result.value=eval(document.calculator.result.value)" class="equal">
                 </div>
             </form>
