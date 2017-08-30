@@ -1,0 +1,26 @@
+{
+  "name": "js-app-opdrachten",
+  "version": "1.0.0",
+  "description": "3 calculators 1 in jquerry, 1 in plain html + js, and one with angularjs.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloydst/rekenmachine.git"
+  },
+  "keywords": [
+    "calculator"
+  ],
+  "author": "lloydst",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/lloydst/rekenmachine/issues"
+  },
+  "homepage": "https://github.com/lloydst/rekenmachine#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
