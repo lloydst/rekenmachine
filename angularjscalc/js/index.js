@@ -1,39 +1,40 @@
-var app = angular.module('plunker', []);
+var app = angular.module("app", []);
 
-app.controller('MainCtrl', function($scope) {
-  $scope.output = "0";
-  $scope.inOperation = false;
-  $scope.num1 = 0;
+app.controller('MainCtrl', function() {
+	var vm = this;
+  	vm.output = "0";
+  	vm.inOperation = false;
+  	vm.num1 = 0;
    
-  $scope.updateOutput = function(btn) {
-		if($scope.newNumber){
-			$scope.output = 0;	
+  	vm.updateOutput = function(btn) {
+		if(vm.newNumber){
+			vm.output = 0;	
 		}
-		if($scope.output == "0" || $scope.newNumber) {
-			$scope.output = btn;
-			$scope.newNumber = false;
+		if(vm.output == "0" || vm.newNumber) {
+			vm.output = btn;
+			vm.newNumber = false;
 		} else {
-			$scope.output += String(btn);
+			vm.output += String(btn);
 		}
 	};
 
-	$scope.operate = function(op) {
-		if($scope.output && !$scope.inOperation){
-			$scope.num1 = $scope.output;
-			$scope.output += op;
-			$scope.inOperation = true;
-		}else if($scope.output.length > $scope.num1.length+1){
-			$scope.output = eval($scope.output);
-			$scope.output += op;
+	vm.operate = function(op) {
+		if(vm.output && !vm.inOperation){
+			vm.num1 = vm.output;
+			vm.output += op;
+			vm.inOperation = true;
+		}else if(vm.output.length > vm.num1.length+1){
+			vm.output = eval(vm.output);
+			vm.output += op;
 		} 
 	};
 
-	$scope.equal = function() {
-		if($scope.output.length > $scope.num1.length+1){
-			$scope.output = eval($scope.output);
-      $scope.num1 = $scope.output;
+	vm.equal = function() {
+		if(vm.output.length > vm.num1.length+1){
+			vm.output = eval(vm.output);
+      vm.num1 = vm.output;
 		}else{
-			$scope.output = $scope.num1;
+			vm.output = vm.num1;
 		}
 	};
 	

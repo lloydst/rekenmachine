@@ -1,42 +1,42 @@
 <!DOCTYPE html>
-<html ng-app="plunker">
+<html ng-app="app">
 
   <head>
     <meta charset="utf-8" />
-    <title>AngularJS Plunker</title>
-    <script>document.write('<base href="' + document.location + '" />');</script>
+    <title>AngularJS</title>
+    <base href="/">
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body ng-controller="MainCtrl">
+  <body ng-controller="MainCtrl as vm">
     <div class="wrapper">
     
     <p class="calc-display">
-      <input type="text" name="output" id="res" value="{{output}}" class="output">
+      <div name="output" id="res" class="output">{{vm.output}} </div>
     </p>
-    <div class="row">
-        <input type="button" value="7" name="num" ng-click='updateOutput("7")'>
-        <input type="button" value="8" name="num" ng-click='updateOutput("8")'>
-        <input type="button" value="9" name="num" ng-click='updateOutput("9")'>
-        <input type="button" value="-" name="operator" ng-click='operate("-")'>
+    <div class="row 1">
+        <button type="button" name="num" ng-click='vm.updateOutput("7")'>7</button>
+        <button type="button" name="num" ng-click='vm.updateOutput("8")'>8</button>
+        <button type="button" name="num" ng-click='vm.updateOutput("9")'>9</button>
+        <button type="button" name="operator" ng-click='vm.operate("-")'>-</button>
       </div>
-      <div class="row">
-        <input type="button" value="4" name="num" ng-click='updateOutput("4")'>
-        <input type="button" value="5" name="num"ng-click='updateOutput("5")'>
-        <input type="button" value="6" name="num" ng-click='updateOutput("6")'> 
-        <input type="button" value="+" name="operator" ng-click='operate("+")'>
+      <div class="row 2">
+        <button type="button" name="num" ng-click='vm.updateOutput("4")'>4</button>
+        <button type="button" name="num"ng-click='vm.updateOutput("5")'>5</button>
+        <button type="button" name="num" ng-click='vm.updateOutput("6")'>6</button>
+        <button type="button" name="operator" ng-click='vm.operate("+")'>+</button>
       </div>
-      <div class="row">
-        <input type="button" value="1" name="num" ng-click='updateOutput("1")'>
-        <input type="button" value="2" name="num" ng-click='updateOutput("2")'>
-        <input type="button" value="3" name="num" ng-click='updateOutput("3")'>
-        <input type="button" value="*" name="operator" ng-click='operate("*")'>
+      <div class="row 3">
+        <button type="button" name="num" ng-click='vm.updateOutput("1")'>1</button>
+        <button type="button" name="num" ng-click='vm.updateOutput("2")'>2</button>
+        <button type="button" name="num" ng-click='vm.updateOutput("3")'>3</button>
+        <button type="button" name="operator" ng-click='vm.operate("*")'>*</button>
       </div>
-      <div class="row">
-        <input type="button" value="0" name="num" ng-click='updateOutput("0")'>
-        <input type="button" value="C" name="clear" ng-click='output = 0'>
-        <input type="button" value="=" name="equal" ng-click="equal()">
-        <input type="button" value="/" name="operator" ng-click='operate("/")'>
+      <div class="row 4">
+        <button type="button" name="num" ng-click='vm.updateOutput("0")'>0</button>
+        <button type="button" name="clear" ng-click='vm.output = 0'>C</button>
+        <button type="button" name="equal" ng-click="vm.equal()">=</button>
+        <button type="button" name="operator" ng-click='vm.operate("/")'>/</button>
       </div>
     </div>
     <ul>
@@ -47,8 +47,8 @@
         <li>angular:<br>
             <a href="http://localhost:3002">localhost:3002</a></li>
     </ul>
-
+    <script src="./lib/angular1.6.6.js"></script>
+    <script src="./js/index.js"></script>
   </body>
-<script src="./lib/angular1.6.6.js"></script>
-<script src="./js/index.js"></script>
+
 </html>
