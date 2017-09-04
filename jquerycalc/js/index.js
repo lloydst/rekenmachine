@@ -6,26 +6,26 @@ $(document).ready(function(){
     var operation = null;
     var currentEntry= '0';
     var prevEntry = 0;
-    updateResult = function(displayValue) {
-    displayValue = displayValue.toString();
+    function updateResult(displayValue) {
+        var displayValue = displayValue.toString();
         $('.result').html(displayValue.substring(0, 10));
     };
 
-    isNumber = function(value) {
+    function isNumber (value) {
         return !isNaN(value);
     }
 
-    isOperator = function(value) {
+    function isOperator(value) {
         return value === '/' || value === '*' || value === '+' || value === '-';
     };
 
-operate = function(a, b, operation) {
-  a = parseFloat(a);
-  b = parseFloat(b);
-  if (operation === '+') return a + b;
-  if (operation === '-') return a - b;
-  if (operation === '*') return a * b;
-  if (operation === '/') return a / b;
+    function operate (a, b, operation) {
+        a = parseFloat(a);
+        b = parseFloat(b);
+        if (operation === '+') return a + b;
+        if (operation === '-') return a - b;
+        if (operation === '*') return a * b;
+        if (operation === '/') return a / b;
 }
     // gets the value of the pressed button and store's it in result
     $('input:button').click(function(){
