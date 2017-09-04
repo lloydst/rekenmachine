@@ -1,4 +1,3 @@
-
 // start this script once html is loaded
 $(document).ready(function(){
     // declaration of global vars
@@ -6,6 +5,7 @@ $(document).ready(function(){
     var operation = null;
     var currentEntry= '0';
     var prevEntry = 0;
+    
     function updateResult(displayValue) {
         var displayValue = displayValue.toString();
         $('.result').html(displayValue.substring(0, 10));
@@ -19,14 +19,14 @@ $(document).ready(function(){
         return value === '/' || value === '*' || value === '+' || value === '-';
     };
 
-    function operate (a, b, operation) {
+    function operate(a, b, operation) {
         a = parseFloat(a);
         b = parseFloat(b);
         if (operation === '+') return a + b;
         if (operation === '-') return a - b;
         if (operation === '*') return a * b;
         if (operation === '/') return a / b;
-}
+    }
     // gets the value of the pressed button and store's it in result
     $('input:button').click(function(){
         var buttonPressed = $(this).val()
@@ -50,6 +50,6 @@ $(document).ready(function(){
         }
         updateResult(currentEntry);
     })
-
+   
 })
 
