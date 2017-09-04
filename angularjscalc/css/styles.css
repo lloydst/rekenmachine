@@ -42,6 +42,24 @@ button[name=num] {
     text-align:right;
     background-color: white;
   }
+  .answer {
+    align-self: right;
+    width: 215px;
+    height: 25px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+    text-align:right;
+    background-color: white;
+  }
+  button[name=clearAnswer]{
+    background-color: pink;
+    width: 218px;
+    height: 30px;
+    border: 1px solid black;
+    margin: 1px;
+    padding: 1px;
+  }
   button {
     border-radius: 10px;
   }

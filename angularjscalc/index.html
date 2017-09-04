@@ -12,7 +12,11 @@
     <div class="wrapper">
     
     <p class="calc-display">
-      <div name="output" id="res" class="output">{{vm.answer}}</div>
+      <div>
+        <div name="output" id="res" class="answer">{{vm.answer}}</div>
+        <button type="button" name="clearAnswer" ng-click="vm.resetAnswer()">clear top bar</button>
+        
+      </div>
       <div name="output" id="res" class="output">{{vm.output}} </div>
     </p>
     <div class="row 1">

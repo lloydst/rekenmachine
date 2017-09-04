@@ -47,7 +47,9 @@ app.controller('MainCtrl', function() {
 			
 		}
 	};
-	
+	vm.resetAnswer = function() {
+		vm.answer = ''
+	}
 	
 }
 );
